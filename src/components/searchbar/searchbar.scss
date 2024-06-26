@@ -1,0 +1,74 @@
+@import '../../breakpoints.scss';
+
+.searchBar {
+  .type {
+    button {
+      padding: 12px 36px;
+      border: 1px solid #999;
+      border-bottom: none;
+      background-color: white;
+      cursor: pointer;
+      text-transform: capitalize;
+
+      &.active {
+        background-color: black;
+        color: white;
+      }
+
+      &:first-child {
+        border-top-left-radius: 5px;
+        border-right: none;
+      }
+
+      &:last-child {
+        border-top-right-radius: 5px;
+        border-left: none;
+      }
+    }
+  }
+
+  form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #999;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+
+    input {
+      width: 100%;
+      padding: 12px 24px;
+      border: none;
+      outline: none; // Remove the default focus style
+    }
+
+    button {
+      padding: 12px 24px;
+      border: none;
+      background-color: #f3c351;
+      color: white;
+      font-size: 16px;
+      font-weight: 500;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #f5b623;
+      }
+    }
+
+    @include sm {
+      flex-direction: column;
+      border: none;
+
+      input {
+        margin-bottom: 12px;
+        border: 1px solid #999;
+      }
+
+      button {
+        width: 100%;
+      }
+    }
+  }
+}

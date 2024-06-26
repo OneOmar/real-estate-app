@@ -1,0 +1,76 @@
+@import '../../breakpoints.scss';
+
+.listPage {
+  height: 100%;
+  display: flex;
+
+  @include md {
+    flex-direction: column;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+      width: 6px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: lightgrey;
+      border-radius: 6px;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+      background-color: grey;
+    }
+  }
+
+  .listContainer {
+    height: 100%;
+    flex: 3;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+      width: 6px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: lightgrey;
+      border-radius: 6px;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+      background-color: grey;
+    }
+
+    @include md {
+      flex: none;
+      height: max-content;
+      margin-bottom: 50px;
+    }
+
+    .wrapper {
+      height: 100%;
+      padding-right: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+
+      @include md {
+        padding: 0;
+        overflow: hidden;
+      }
+    }
+  }
+
+  .mapContainer {
+    height: 100%;
+    padding-top: 20px;
+    flex: 2;
+    background-color: #fcf5f3;
+
+    @include md {
+      flex: none;
+      height: 300px;
+      margin-bottom: 50px;
+      background-color: transparent;
+    }
+
+    @include sm {
+      height: 200px;
+    }
+  }
+}

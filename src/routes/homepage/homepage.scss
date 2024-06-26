@@ -1,0 +1,66 @@
+@import '../../breakpoints.scss';
+
+.homePage {
+  height: 100%;
+  display: flex;
+
+  .textContainer {
+    height: 100%;
+    flex: 3;
+
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 60px;
+      height: 100%;
+      padding-right: 80px;
+
+      @include sm {
+        padding-right: 0;
+      }
+
+      .title {
+        font-size: 52px;
+        text-align: center;
+
+        @include md {
+          font-size: 42px;
+        }
+
+        @include sm {
+          font-size: 32px;
+        }
+      }
+
+      .boxes {
+        display: flex;
+        justify-content: space-between;
+
+        h2 {
+          font-size: 28px;
+        }
+      }
+    }
+  }
+
+  .imgContainer {
+    position: relative;
+    height: 100%;
+    flex: 2;
+    background-color: #fcf5f3;
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 110%;
+      position: absolute;
+      right: 0;
+      object-fit: cover;
+    }
+
+    @include md {
+      display: none;
+    }
+  }
+}
